@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
- // @author ariza
+ // @author Enderson Ariza
  
 public class Jdbctest {
 
@@ -27,15 +27,17 @@ public class Jdbctest {
             rs = statement.executeQuery("SELECT * FROM usuarios");
             while(rs.next()){
                 System.out.println(rs.getString("nombre"));  
-           }
-            // insertar Datos
-          /*  statement.execute("INSERT INTO `usuarios` (`Id`, `nombre`) VALUES (NULL, 'Eserna'); ");
+           } 
+            
+              // insertar Datos
+            statement.execute("INSERT INTO `usuarios` (`id`, `nombre`) VALUES (NULL, 'Z_parda'); ");
             System.out.println(""); // lo dejamos vacio para un salto de linea 
-            rs = statement.executeQuery("SELEC * FROM usuarios");
+            rs = statement.executeQuery("SELECT * FROM usuarios");
             while(rs.next()){
                 System.out.println(rs.getString("nombre"));  
-              }*/
-          
+              }
+
+           
         } catch (SQLException ex) {
             Logger.getLogger(Jdbctest.class.getName()).log(Level.SEVERE, null, ex);
         }
