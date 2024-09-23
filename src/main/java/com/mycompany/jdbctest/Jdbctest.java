@@ -28,7 +28,7 @@ public class Jdbctest {
             while(rs.next()){
                 System.out.println(rs.getString("nombre"));  
            } 
-            
+            /*
                  // insertar Datos
             statement.execute("INSERT INTO `usuarios` (`id`, `nombre`) VALUES (NULL, 'Z_parda'); ");
             System.out.println(""); // lo dejamos vacio para un salto de linea 
@@ -39,6 +39,15 @@ public class Jdbctest {
             
                  //Actualización de Datos
             statement.execute("UPDATE `usuarios` SET `nombre` = 'E_rodriguez' WHERE `usuarios`.`id` = 1; ");
+            System.out.println(""); // lo dejamos vacio para un salto de linea 
+            rs = statement.executeQuery("SELECT * FROM usuarios");
+            while(rs.next()){
+                System.out.println(rs.getString("nombre"));  
+              }
+            */
+            
+             //Eliminando de Datos
+            statement.execute("DELETE FROM usuarios WHERE `usuarios`.`id` = 3; ");
             System.out.println(""); // lo dejamos vacio para un salto de linea 
             rs = statement.executeQuery("SELECT * FROM usuarios");
             while(rs.next()){
